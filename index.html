@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOnlineMeal.com</title>
+   
+
+    
+  
+ 
+</head>
+<style>
+    /* body  */
+    body {
+        margin: 0;
+        padding: 0;
+        background-color:white;
+    }
+
+    /* navigation bar  */
+
+
+
+    /* navigation bar:logo and image  */
+
+    .logo {
+        margin: 10px 10px;
+
+    }
+    html { scroll-behavior: smooth;}
+
+    .logo img {
+        width: 100px;
+        height: 90px;
+        margin: 3px 6px;
+    }
+
+
+    /* navigation bar : list styling  */
+
+    #navbar {
+        display: flex;
+        align-items: center;
+
+
+    }
+
+    #navbar {
+        position: sticky;
+        top: 0;
+    }
+
+    #navbar:before {
+        content: " ";
+        background-color: black;
+        width: 100%;
+        height: 95%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: -1;
+        opacity: 0.5;
+
+
+    }
+
+    #navbar ul {
+        display: flex;
+    }
+
+    #navbar ul li {
+        list-style-type: none;
+
+    }
+
+    #navbar ul li a {
+        list-style-type: none;
+        color: white;
+        padding: 3px 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 22px;
+        l
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+        background-color: white;
+
+
+    }
+
+    /* #home */
+
+    #home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 780px;
+
+    }
+
+    #home::before {
+        content: " ";
+        background-image: url("bg-image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 1;
+
+    }
+
+    #services {
+        margin: 5px;
+        display: flex;
+    }
+
+    #services .box {
+        border: 2px solid black;
+        padding: 34px;
+        margin: 3px 6px;
+        border-radius: 20px;
+        background-color: rgb(255, 253, 253);
+
+
+    }
+
+    #services .box img {
+        width: 160px;
+        height: 160px;
+        margin: auto;
+        display: block;
+    }
+
+    /* cilent-section */
+    
+
+    #clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+
+    }
+    #client-section { 
+        position: relative;
+    }
+    #client-section::before {
+        content: " ";
+        background-image: url("foood.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.5;
+         
+
+    }
+
+    #clients img { height:175px;
+                   width:auto ;
+    }
+
+    .clients-item {
+        padding: 40px;
+    }
+
+
+    #contact {
+        position: relative;
+
+    }
+
+    #contact::before {
+        content: " ";
+        background-image: url("contact.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.8;
+
+    }
+
+    #contact-box {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-bottom: 40px;
+        
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        width: 100%;
+        padding: 10px 24px;
+        border-radius: 10px;
+        font-size: 20px;
+
+    }
+    #contact-box form { width:40%;
+    }
+
+    #contact-box label {
+        font-size: 25px;
+    }
+
+
+    /* utility class */
+
+    #home h1 {
+        font-size: 40px;
+        padding: 6px;
+        margin: 0;
+        text-align: center;
+        color: white;
+    }
+
+    #home p {
+        font-size: 20px;
+        padding: 3px;
+        text-align: center;
+        color: white;
+    }
+
+    .btn {
+        padding: 6px;
+        20px;
+        border: 2px solid white;
+        background-color: red ;
+        color: white;
+        margin: 12px;
+        font-size: 30px;
+        border-radius: 10px;
+        cursor: poitner;
+    }
+    .btn:hover { 
+        background-color:brown;
+        color:white;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .h-primary {
+        font-size: 50px;
+
+
+    }
+
+    .h-secondary {
+        font-size: 36px;
+        padding: 12px;
+
+    }
+
+  /* media queries work  */
+
+  @media screen and  (max-width: 1170px) {
+      
+      /* navigation bar  */
+ 
+ #navbar { flex-direction: column;
+}
+#navbar ul li a { font-size: 13px;
+                  padding:0px 7px;
+                padding-bottom: 7px;}
+ 
+  /* home bar  */
+ #home { height:320px;
+    padding: 3px 68px;
+
+}
+ #home::before { height:470px;
+}
+ #home p { 
+     font-size: 13px;
+ }
+ 
+ 
+  /* services  */
+ 
+ #services { 
+     flex-direction: column;
+ }
+ 
+  /* clients */
+ 
+ #clients { 
+     flex-wrap: wrap;
+     
+ }
+
+ #clients img { 
+      width:75px;
+      
+      padding:0 6px ;
+      height: auto;
+     
+ }
+ /* utility class */
+ .h-primary { font-size: 33px;}
+ .btn { font-size: 20px;
+        padding: 10px 20px  ;
+    text-align: center;}
+   /* form  */
+ 
+ 
+ 
+   /* footer  */
+ 
+ }
+</style>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png.png" alt="myOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home"> home</a></li>
+            <li class="item"><a href="#services"> services </a></li>
+            <li class="item"><a href="#client-section"> Our Clients</a></li>
+            <li class="item"><a href="#contact"> Contact us</a></li>
+
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary"> Welcome to MyOnlineMeal</h1>
+        <p class="p-primary">Pixabay.com is an international, copyleft and free-to-use website
+            for sharing photos, illustrations, vector graphics, film footage
+            and music. As of November 2017, Pixabay offers over 1,188,454 free photos,
+            illustrations, and vectors and videos. </p>
+        <button class="btn">Order Now</button>
+    </section>
+
+    <section class=" services-container">
+        <h1 class="h-primary center">Our Services</h1>
+
+        <div id="services">
+            <div class="box">
+                <img src="pizza3.jpg" alt="">
+                <h2 class="h-secondary center"> Food Ordering</h2>
+                <p class="center">ipsum dolor sit
+                    amet consectetur adipisicing elit. Perspiciatis accusantium
+                    repellat animi facere laudantium deserunt, sit ipsa exercitationem tenetur, repudiandae v
+                    elit odit ducimus laboriosam inventore explicabo eius temporibus eligendi iste dolore rem asperiores
+                    eaque!
+                </p>
+            </div>
+            <div class="box">
+                <img src="food1.jpg" alt="">
+                <h2 class="h-secondary center"> Food catering</h2>
+                <p class="center">ipsum dolor sit
+                    amet consectetur adipisicing elit. Perspiciatis accusantium
+                    repellat animi facere laudantium deserunt, sit ipsa exercitationem tenetur, repudiandae v
+                    elit odit ducimus laboriosam inventore explicabo eius temporibus eligendi iste dolore rem asperiores
+                    eaque!
+                </p>
+            </div>
+            <div class="box">
+                <img src="bulk.png" alt="">
+                <h2 class="h-secondary center"> Bulk Ordering</h2>
+                <p class="center">ipsum dolor sit
+                    amet consectetur adipisicing elit. Perspiciatis accusantium
+                    repellat animi facere laudantium deserunt, sit ipsa exercitationem tenetur, repudiandae v
+                    elit odit ducimus laboriosam inventore explicabo eius temporibus eligendi iste dolore rem asperiores
+                    eaque!
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our clients</h1>
+        <div id="clients">
+            <div class="clients-item">
+                <img src="apple-logo.png" alt="">
+            </div>
+            <div class="clients-item">
+                <img src="pngguru.com.png" alt="">
+            </div>
+            <div class="clients-item">
+                <img src="hiclipart.com (1).png" alt="">
+            </div>
+            
+            <div class="clients-item">
+                <img src="hp logo.png" alt="">
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us
+        </h1>
+        <div id="contact-box">
+            <form action="">
+
+                <div class="form-group">
+                    <label for=" ">Name:</label>
+                    <input type="text" name=" " placeholder=" Enter your name">
+
+                </div>
+                <div class="form-group">
+                    <label for=" ">Email:</label>
+                    <input type="email" name=" " placeholder=" Enter your email">
+
+                </div>
+                <div class="form-group">
+                    <label for=" ">Phone number:</label>
+                    <input type="number" name=" " placeholder=" Enter your phone number">
+
+                </div>
+                <div class="form-group">
+                    <label for=" ">Message:</label>
+                    <textarea name="message" id="" cols="30" rows="10"></textarea>
+
+
+                </div>
+                <button class="btn"  >Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div style="background-color:black;color:white;"  class="center">
+            Copyright &copy; www.MyOnlineMeal.com All right reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>
